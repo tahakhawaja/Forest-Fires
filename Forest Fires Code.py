@@ -425,10 +425,6 @@ final_mae = metrics.mean_absolute_error(y_testlo, final_pred)
 print('The final RMSE on the test set is', round(final_rmse, 2))
 print('The final MAE on the test set is', round(final_mse, 2))
 
-# KNN Classification
-#import classification report library
-from sklearn.metrics import classification_report
-
 knn = KNeighborsClassifier()
 knn.fit(X_trainc, y_trainc)
 knn_predi = knn.predict(X_testc)
@@ -448,7 +444,6 @@ print(classification_report(y_testc,forest_predi))
 # import libraries for oversampling
 from imblearn.over_sampling import SMOTE
 from collections import Counter
-from matplotlib import pyplot
 
 oversample = SMOTE()
 X_os, y_os = oversample.fit_resample(X,y)
@@ -465,9 +460,6 @@ pyplot.show()
 from numpy import mean
 from numpy import std
 from sklearn.model_selection import KFold
-from sklearn.model_selection import GridSearchCV
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.metrics import accuracy_score
 # configure the cross-validation 
 cv_outer = KFold(n_splits=10, shuffle=True, random_state=1)
 outer_results = list()
