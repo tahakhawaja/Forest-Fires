@@ -1,15 +1,8 @@
 version = 1
 
 [[analyzers]]
-name = "javascript"
+name = "python"
 enabled = true
 
   [analyzers.meta]
-  plugins = [
-    "react",
-    "meteor",
-    "ember",
-    "vue",
-    "angularjs",
-    "angular"
-  ]
+  runtime_version = "3.x.x"
