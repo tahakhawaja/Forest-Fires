@@ -27,7 +27,7 @@ df = pd.read_csv("https://archive.ics.uci.edu/ml/machine-learning-databases/fore
 """
 
 #display dataframe
-df.head()
+df.head(7)
 
 # checking for missing values (no null values)
 df.isnull().sum()
